@@ -19,8 +19,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I aspire to deliver new value to humanity through the integration of hardware and software. To this end, I majored in [Mechanical Engineering](https://mech.skku.edu/me/index.do) and [Software Engineering](https://cse.skku.edu/cse/index.do). I have developed my programming skills through work at `Kakao Style`, `Samsung Electronics`, `manufacturing SMEs`, and `startups`. I also enhanced my research skills while working as an undergraduate research assistant in the `Automation Lab` and `AIFactory Lab`.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+During my service as a `KATUSA` (Korean Augmentation to the United States Army), I maintained good relations with the U.S. military. I have experience in engaging in business-like conversations, including serving as a training instructor.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+If you have any questions, please feel free to contact me using the links below.
