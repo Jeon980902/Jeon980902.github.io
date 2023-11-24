@@ -1,31 +1,45 @@
+# Set This Workflow's Name as "deploy"
 name: deploy
 
+# Define the Events that will trigger the Execution of the Workflow
 on:
+  # Specifies that the workflow will run on 'push'
   push:
+    # Targeting 'Master' and 'Main' Branches
     branches:
       - master
       - main
+  # Specifies that the workflow will run on 'pull_request'
   pull_request:
+    # Targeting 'Master' and 'Main' Branches
     branches:
       - master
       - main
+  # Allows the workflow to be manually triggered
   workflow_dispatch:
 
+# Set Permissions for the repository, to 'Write'
 permissions:
   contents: write
 
+# Define a job
 jobs:
+  # Set Name of the job as 'deploy'
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
+    # Will run on Ubuntu
     runs-on: ubuntu-latest
+    # Define a step of this Job
     steps:
+    # Git Checkout the current repository
     - name: Checkout 🛎️
       uses: actions/checkout@v3
+    # Set up Ruby  
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.2.2'
         bundler-cache: true
+    # Updates the _config.yml file using the fjogeleit/yaml-update-action@v0.13.1 action to set the giscus.repo property to the name of the current GitHub repository.
     - name: Update _config.yml ⚙️
       uses: fjogeleit/yaml-update-action@v0.13.1
       with:
@@ -33,6 +47,7 @@ jobs:
         valueFile: '_config.yml'
         propertyPath: 'giscus.repo'
         value: ${{ github.repository }}
+    # Install Necessary Packages    
     - name: Install and Build 🔧
       run: |
         pip3 install --upgrade jupyter
@@ -41,9 +56,9 @@ jobs:
         export JEKYLL_ENV=production
         bundle exec jekyll build --lsi
         purgecss -c purgecss.config.js
+    # Deployment of the site to Github Pages
     - name: Deploy 🚀
       if: github.event_name != 'pull_request'
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: _site
-
