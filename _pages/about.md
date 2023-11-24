@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Bachelor</a>. SungKyunKwan University
+subtitle: <a href='https://www.skku.edu/skku/index.do'>Bachelor</a> at SungKyunKwan University
 
 profile:
   align: right
